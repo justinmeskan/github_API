@@ -7,12 +7,15 @@ const LabelStyles = styled.label`
   color: ${(props) => props.theme.color};
 `
 
+const ToggleStyles = styled.label`
+  margin: 23px 0 0 32px;`
+
 export default function Toggle() {
     const dispatch = useDispatch()
     const switchRef = useRef(null)
     const theme = useSelector( state => state.app.theme)
     return (
-        <div data-test={"component_toggle"} className="form-check form-switch" id={"toggle_wrapper"}>
+        <ToggleStyles data-test={"component_toggle"} className="form-check form-switch" id={"toggle_wrapper"}>
             <input
                 onChange={(e) => {
                     dispatch({type: SET_THEME, payload: !theme})
@@ -28,7 +31,7 @@ export default function Toggle() {
                 >
                 Dark Theme
                 </LabelStyles>
-        </div>
+        </ToggleStyles>
     )
 }
 

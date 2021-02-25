@@ -25,7 +25,6 @@ const app = (state = initialState, action) => {
                 searchTerm: action.payload
             }
         case SET_THEME:
-            console.log('set theme==', action.payload)
             return {
                 ...state,
                 theme: action.payload
