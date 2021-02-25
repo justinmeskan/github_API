@@ -26,3 +26,8 @@ This will run all the jest and enzyme tests.
 #### quickly if there are numerous. I also connected extra redux middle-ware in case
 #### a user  wanted to use the pagination and travel back to a previous state using the
 #### Back button.
+
+### Caveat
+#### You will need to goto 'https://github.com/settings/tokens' and create 
+#### a token, then replace the REACT_APP_GITHUB_ACCESS_TOKEN value in the .env
+#### file with your personal Github API token.
